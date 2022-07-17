@@ -1,0 +1,326 @@
+@font-face {
+    font-family: Vazir;
+    src: url('../Font/vazir-font-v27.2.2-Fontjo.com/Vazir-Bold.eot');
+    src: url('Vazir-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../Font/vazir-font-v27.2.2-Fontjo.com/Vazir-Bold.woff2') format('woff2'),
+         url('./vazir-font-v27.2.2-Fontjo.com/Vazir-Bold.woff') format('woff'),
+         url('./vazir-font-v27.2.2-Fontjo.com/Vazir-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+:root{
+    --text-first: #282a32;
+    --text-second: #686b87;
+    --text-color: #404089;
+    --border-second: #434ce8;
+    --border-first: #eff1f6;
+    --background-first: #ffffff;
+    --background-second: #fdfcff;
+    --background-third: #ecf3fe;
+    --background-fourth: #e9ecf4;
+}
+
+body{
+    font-family: 'Vazir';
+    background-color: var(--background-first);
+    line-height: 1.5;
+    color: var(--text-first);
+    font-weight: 600;
+}
+
+.all-responsive{
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main{
+    padding-top: 2rem;
+}
+
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h1{
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+@media (max-width: 500px){
+    .header h1{
+        margin-bottom: 1rem;
+    }
+}
+
+.search{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 340px;
+}
+
+.search input{
+    font: inherit;
+    color: inherit;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1em 0 36px;
+    height: 40px;
+    border-radius: 8px;
+    border: 2px solid var(--border-first);
+    color: var(--text-action);
+    font-size: 0.8rem;
+    transition: 0.15 ease;
+    width: 100%;
+    line-height: 1;
+}
+
+.search input:focus, .search input:hover{
+    border-color: var(--border-second);
+    outline: var(--border-second);
+}
+
+.search input::placeholder{
+    color: var(--text-color);
+}
+
+.search button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.25em;
+    padding: 0;
+    height: 40px;
+}
+
+.head-nav{
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 2px solid var(--border-first);
+}
+
+@media (max-width: 100px){
+    .head-nav{
+        position: relative;
+        scrollbar-width: none;
+    }
+}
+
+.head-nav a{
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    height: 48px;
+    padding: 0 0.25rem;
+    font-weight: 500;
+    color: inherit;
+    border-bottom: 3px solid transparent;
+    text-decoration: none;
+    transition: 0.15s ease-in-out;
+}
+
+.head-nav a:hover, .head-nav a:focus, .head-nav a:active{
+    color: var(--text-color);
+    border-bottom: 3px solid var(--border-second);
+    border-color: var(--border-second);
+}
+
+.head-nav a + *{
+    margin-left: 1em;
+}
+
+.head-content-text h2{
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.head-content-text p{
+    color: var(--text-second);
+    margin-top: 0.25rem;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+@media (min-width:800px){
+    .head-content-button a:first-child{
+        display: none;
+    }
+}
+
+.button{
+    font: inherit;
+    color: inherit;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1em;
+    height: 40px;
+    border-radius: 8px;
+    line-height: 1;
+    border: 2px solid var(--border-first);
+    transition: 0.3s ease-in-out;
+}
+
+.button i{
+    margin-left: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.button span{
+    font-weight: 500;
+}
+
+.button:hover, .button:focus{
+    color: var(--text-color);
+    border: 2px solid var(--border-second);
+}
+
+.content{
+    border-top: 1px solid var(--border-first);
+    margin-top: 2rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.side-panel{
+    display: none;
+    max-width: 280px;
+    width: 25%;
+    padding: 2rem 0 2rem 0;
+    margin-left: 3rem;
+}
+
+@media (min-width: 800px){
+    .side-panel{
+        display: block;
+    }
+}
+
+.tools-panel a{
+    display: flex;
+    align-items: center;
+    padding: 0.75em 1em;
+    background-color: transparent;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: 0.15s ease-in-out;
+}
+
+.tools-panel a:hover, .tools-panel a:focus, .tools-panel a:active{
+    color: var(--text-second);
+    background-color: var(--background-third);
+}
+
+.tools-panel a + *{
+    margin-top: 0.25rem;
+}
+
+.tools-panel .active{
+    color: var(--text-second);
+    background-color: var(--background-third);
+}
+
+.tools-card{
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+    flex-grow: 1;
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+}
+
+@media (min-width: 600px){
+    .card-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px){
+    .card-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.card{
+    background-color: var(--background-first);
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.05), 0 5px 15px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1.25rem 1.2rem 1rem 1.5rem;
+}
+
+.card-header div{
+    display: flex;
+    align-items: center;
+}
+
+.card-header div span{
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.card-header div span img{
+    max-height: 100%;
+}
+
+.card-header div h3{
+    margin-left: 0.7rem;
+    font-weight: 500;
+}
+
+.card-body{
+    padding: 1rem 1.25rem;
+    font-size: 0.8rem;
+}
+
+.card-footer{
+    margin-top: auto;
+    padding: 1rem 1.25rem;
+    display: flex;
+    justify-content: flex-start;
+    border-top: 1px solid var(--border-first);
+}
+
+.card-footer a{
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
